@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.fan.chameleonpagertabstrip.demo.MainActivity">
+
+    <com.fan.chameleonpagertabstrip.ChameleonPagerTabStrip
+        android:id="@+id/viewPagerTabStrip"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#333333"
+        app:focusColor="@color/text_color_focus"
+        app:normalColor="@color/text_color_normal"
+        app:tabTextSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#cccccc" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager_demo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

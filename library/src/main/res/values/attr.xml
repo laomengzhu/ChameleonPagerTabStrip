@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ChameleonPagerTabStrip">
+        <attr name="normalColor" format="color|reference" />
+        <attr name="focusColor" format="color|reference" />
+        <attr name="tabTextSize" format="dimension|reference" />
+    </declare-styleable>
+</resources>
