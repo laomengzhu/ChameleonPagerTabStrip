@@ -268,6 +268,16 @@ public class ChameleonPagerTabStrip extends HorizontalScrollView implements OnPa
 
     @Override
     public void onPageSelected(int position) {
+        int childWidth = 0;
+        for (int i = 0; i <= position; i++) {
+            childWidth += tabsContainer.getChildAt(i).getMeasuredWidth() + 2 * minMargin;
+        }
+        if (childWidth > getMeasuredWidth()) {
+            smoothScrollBy(childWidth - getMeasuredWidth(), 0);
+        } else if (childWidth < getMeasuredWidth() && getScrollX() != 0) {
+            smoothScrollBy(-getScrollX(), 0);
+        }
+
         if (delegatePageListener != null) {
             delegatePageListener.onPageSelected(position);
         }
